@@ -11,6 +11,7 @@ pipeline {
     stage('Static Analysis') {
       steps {
         echo 'Static Analysis'
+        sh 'ls'
       }
     }
 
