@@ -11,11 +11,9 @@ pipeline {
     stage('Static Analysis') {
       steps {
         echo 'Static Analysis'
-        sh '''withSonarQubeEnv() {
-  sh \'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar\'
-}'''
+        withSonarQubeEnv() {
+          sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
         }
       }
-
     }
   }
