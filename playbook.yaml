@@ -11,7 +11,7 @@
     register: file_name
     tags: test
 
-  - name: upload jar file to server
+  - name: upload
     tags:
      - upload
      - test
@@ -20,6 +20,6 @@
      dest: ~/
     when: file_name.stdout != ""
 
-  - name: start server
+  - name: start
     shell: "nohup java -jar ~/*.jar &"
     tags: start
