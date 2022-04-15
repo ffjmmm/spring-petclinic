@@ -9,7 +9,7 @@ pipeline {
     
     stage('Deploy') {
       steps {
-        ansiblePlaybook credentialsId: '9419ef0c-5510-47b9-99d0-15c4b7e78942', disableHostKeyChecking: true, installation: 'ansible', 
+        ansiblePlaybook credentialsId: '33fb492f-d44b-4ed9-862e-48582f01a62a', disableHostKeyChecking: true, installation: 'ansible', 
           inventory: '/var/lib/jenkins/workspace/spring-petclinic_main/hosts', 
           playbook: '/var/lib/jenkins/workspace/spring-petclinic_main/playbook.yaml'
       }
