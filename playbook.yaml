@@ -1,7 +1,7 @@
 - hosts: web
   vars:
-    pwd: /var/lib/jenkins/workspace/spring-petclinic
-
+    pwd: /var/lib/jenkins/workspace/spring-petclinic_main
+    
   remote_user: vagrant
   gather_facts: false
 
